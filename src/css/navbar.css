@@ -1,0 +1,59 @@
+.navbar {
+    background-color: #4c4949;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+
+}
+
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar-placeholder {
+    height: 70px;
+}
+
+.navbar-cart {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar-cart img {
+    width: 3rem;
+}
+
+.navbar-cart{
+    display: flex;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+}
+
+.offcanvas-body {
+    background-color: #4c4949 !important;
+}
+
+.offcanvas-body img {
+    width: 8rem;
+}
+
+.offcanvas-header {
+    background-color: #4c4949 !important;
+
+}
