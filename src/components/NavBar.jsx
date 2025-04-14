@@ -53,10 +53,20 @@ function NavBar() {
                          aria-labelledby="offcanvasExampleLabel">
                         <div className="offcanvas-header">
                             <h5 className="offcanvas-title" id="offcanvasExampleLabel">Your Cart</h5>
+
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas"
                                     aria-label="Close"></button>
+
                         </div>
                         <div className="offcanvas-body">
+                            {cartItems.length > 0 && (
+                                <div className="cart-total">
+                                    <h5>
+                                        Total: ${cartItems.reduce((sum, item) =>
+                                        sum + item.price * (item.quantity || 1),0).toFixed(2)}
+                                    </h5>
+                                </div>
+                            )}
                             {cartItems.length === 0 ? (<p>Your cart is empty</p>
                             ) : (cartItems.map((item, index) => (<div key={index}>
                                         <h5>{item.title}</h5>
